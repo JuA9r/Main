@@ -3,8 +3,8 @@ import java.awt.*;
 import java.io.*;
 
 public class Main extends JFrame {
-    private JTextArea textArea;
-    private JFileChooser fileChooser;
+    private final JTextArea textArea;
+    private final JFileChooser fileChooser;
 
     public Main() {
         setTitle("Simple NotePad");
@@ -46,11 +46,14 @@ public class Main extends JFrame {
             try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
                 textArea.read(reader, null);
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(this, "File could not be opened!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(
+                        this, "File could not be opened!",
+                        "Error", JOptionPane.ERROR_MESSAGE
+                );
             }
         }
     }
-    
+
     private void saveFile() {
         int result = fileChooser.showSaveDialog(this);
         if (result == JFileChooser.APPROVE_OPTION) {
@@ -58,7 +61,10 @@ public class Main extends JFrame {
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
                 textArea.write(writer);
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(this, "File could not be saved!", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(
+                        this, "File could not be saved!",
+                        "Error", JOptionPane.ERROR_MESSAGE
+                );
             }
         }
     }
