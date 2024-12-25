@@ -1,23 +1,29 @@
-# **memo pad**
+# **Memo Pad**
 
-- This project implements Memo Pad
+This project implements a simple Memo Pad application, which allows users to create, edit, open, and save text files using a basic graphical user interface (GUI) built with Java Swing.
 
-  ## **Execution Environment**
+---
+
+## **Execution Environment**
 - **Java**: 23
 
 ---
 
-## Table of Contents
+## **Table of Contents**
 - [How to Run](#how-to-run)
 - [Dependencies](#dependencies)
 - [License](#license)
 
-## How to Run
-1. Ensure you have Java installed on your system.
-2. Run the program:
+---
+
+## **How to Run**
+1. Ensure you have Java 23 installed on your system.
+2. Clone or download the repository.
+3. Compile and run the program using the following commands:
    ```bash
-   Java Main.java
-   ```
+   javac Main.java
+   java Main
+   
 ## Dependencies
 - Java x
 
